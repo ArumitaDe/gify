@@ -1,11 +1,4 @@
-var requestdata = new XMLHttpRequest();
-requestdata.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
-requestdata.onload = function() {
-    var ourData = requestdata.responseText;
-    var data = JSON.parse(requestdata.responseText);
-    console.log(data[2].name);
-};
-requestdata.send();
+
 
 var arr = ['cat', 'dog', 'cheetah', 'crow', 'chicken', 'cow', 'tiger', 'squirrel', 'lion', 'pelican', 'parrot', 'jellyfish', 'shark', 'human'];
 for (var i = 0; i < arr.length; i++) {
@@ -43,7 +36,7 @@ $('#btnTest').click(function() {
 $("#section1").click(function(event) {
     var text = $(event.target).text();
     console.log(text);
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         text + "&api_key=dc6zaTOxFJmzC&limit=10";
     // Perfoming an AJAX GET request to our queryURL
     console.log(queryURL);
